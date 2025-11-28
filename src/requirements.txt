@@ -1,4 +1,4 @@
 google
-google-genai
 rich
 python-dotenv
+google-generativeai
