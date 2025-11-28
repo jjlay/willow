@@ -127,7 +127,7 @@ def client_receive_thread():
             if speaker == "Server" :
                 my_color = "[magenta]"
 
-            if speaker == "JJ" :
+            if (speaker != "Server") and (speaker != "Willow") :
                 my_color = "[yellow]"
                 role = "user"
 
