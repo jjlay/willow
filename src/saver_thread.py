@@ -87,7 +87,7 @@ def saver_thread() :
     # Load existing history
     #
 
-    json_history = load_history("history.json")
+    json_history = load_history(global_variables.global_history_file)
 
     with global_variables.global_history_lock :
         global_variables.global_history = copy.deepcopy(json_history)
@@ -103,10 +103,10 @@ def saver_thread() :
             with global_variables.global_history_lock :
                 localhistory = copy.deepcopy(global_variables.global_history)
             
-            with open("history.json", "w") as history_file :
+            with open(global_variables.global_history_file, "w") as history_file :
                 json.dump(localhistory, history_file, indent=5)
 
-            #ai2_globals.console.print("Saver: History saved.")
+            # globals.console.print("Saver: History saved.")
 
         except Exception as e:
             global_variables.console.print(f"Saver error: {e}")

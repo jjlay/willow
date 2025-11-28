@@ -73,7 +73,7 @@ API_KEY:str = ""
 console = Console(width=100)
 
 
-# 1. Thread-Safe Communication Queues
+# Thread-Safe Communication Queues
 # Human Client Queues
 Server_Queue = queue.Queue()             # Human input -> Server
 Client_Receive_Queue = queue.Queue()     # Server -> Human output
@@ -99,7 +99,20 @@ LLM_USERNAME = "Willow" # LLM's dedicated username
 
 global_history = {}
 global_history_lock = threading.Lock()
-SAVE_INTERVAL = 10 # Seconds
+SAVE_INTERVAL:int = 10 # Seconds
 
 global_content = []
 global_content_lock = threading.Lock()
+
+
+
+###############################################################################
+#
+#  Path Variables
+#
+###############################################################################
+
+global_config_root:str = ""
+global_instructions_file:str = ""
+global_history_file:str = ""
+

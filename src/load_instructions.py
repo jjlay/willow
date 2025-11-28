@@ -72,8 +72,7 @@ def load_instructions(path) :
     try:
         with open(path, 'r', encoding='utf-8') as f:
             # We use json.load() to read the JSON and convert it back to a Python list of dicts
-            loaded_instructions = f.read()
-            #console.print(f"✅ Instructions successfully loaded from {path}")
+            loaded_instructions = f.read()            
             return loaded_instructions
         
     except FileNotFoundError:

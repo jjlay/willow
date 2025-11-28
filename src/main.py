@@ -79,6 +79,7 @@ from client_receive_thread import client_receive_thread
 from client_write_thread import client_write_thread
 from saver_thread import saver_thread
 from recorder_thread import recorder_thread
+from load_config import load_config
 
 
 ###############################################################################
@@ -96,10 +97,8 @@ import global_variables
 #
 ###############################################################################
 
-# --- 6. Main Execution ---
 if __name__ == "__main__":
-    
-    # Define the four required threads
+    load_config()
     
     # --- Saver Thread
     saver_t = threading.Thread(target=saver_thread, name='Saver-Thread')

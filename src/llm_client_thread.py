@@ -83,7 +83,7 @@ def llm_client_thread():
     """Simulates the LLM's thought process and response generation."""
     global_variables.console.print(f"\n🧠 LLM Client ({global_variables.LLM_USERNAME}): Initializing...")
     
-    my_instructions = load_instructions("instructions.txt")
+    my_instructions = load_instructions(global_variables.global_instructions_file)
 
     while not global_variables.STOP_EVENT.is_set():
         try:

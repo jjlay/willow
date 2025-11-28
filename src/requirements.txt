@@ -1,4 +1,4 @@
 google
 google-genai
 rich
-dotenv
+python-dotenv
