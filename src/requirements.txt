@@ -1,4 +1,1 @@
-google
-rich
-python-dotenv
-google-generativeai
+Pillow>=9.0.0
