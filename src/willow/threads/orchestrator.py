@@ -1,9 +1,56 @@
-"""Orchestrator thread (Thread 8) for routing messages between widgets."""
+
+###############################################################################
+#
+#
+#  CHANGE LOG
+#
+#     DATE        AUTHOR         COMMENTS  
+#  ----------   ------------   -------------------
+#  2025-10-01   JJ Lay         Initial version
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#
+#   MODULE: orchestrator.py
+#
+#   PURPOSE:
+#   The orchestrator thread that routes messages between 
+#   widget controllers, the mind, and archiving.
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#   References:
+#
+#   https://github.com/Textualize/rich?tab=readme-ov-file
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  Standard Python Imports
+#
+###############################################################################
 
 import queue
 import time
 from typing import Dict
 
+
+###############################################################################
+#
+#  Class: Orchestrator
+#
+###############################################################################
 
 class Orchestrator:
 
@@ -70,7 +117,7 @@ class Orchestrator:
     #  Function: handle_user_input()
     #
     #  Description:
-    #     Route user input messages to Widget 6 and Archivist.
+    #     Route user input messages to Widget 6, Archivist, and LLM.
     #
     #  Parameters:
     #     msg - Message containing user input text

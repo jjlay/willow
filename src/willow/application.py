@@ -1,9 +1,56 @@
-"""Main Willow application class."""
+
+###############################################################################
+#
+#
+#  CHANGE LOG
+#
+#     DATE        AUTHOR         COMMENTS  
+#  ----------   ------------   -------------------
+#  2025-10-01   JJ Lay         Initial version
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#
+#   MODULE: application.py
+#
+#   PURPOSE:
+#   The primary application class that initializes the UI and manages threads.
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#   References:
+#
+#   https://github.com/Textualize/rich?tab=readme-ov-file
+#
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  Standard Python Imports
+#
+###############################################################################
 
 import tkinter as tk
 import threading
 import queue
 from typing import Dict, Any, List, Optional
+
+
+###############################################################################
+#
+#  Project Specific Imports
+#
+###############################################################################
 
 from .ui import WidgetFactory, WidgetEventHandlers
 from .image_utils import GifAnimator
@@ -17,6 +64,12 @@ from .threads import (
     Archivist
 )
 
+
+###############################################################################
+#
+#  Class: WillowApplication
+#
+###############################################################################
 
 class WillowApplication:
     """Main Willow application class managing UI and thread coordination.
