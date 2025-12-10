@@ -48,6 +48,22 @@ from typing import List, Optional
 class GifAnimator:
     """Handles GIF loading and frame animation."""
     
+
+    #####################################################
+    #
+    #  Function: __init__()
+    #
+    #  Description:
+    # 
+    #
+    #  Parameters:
+    # 
+    #
+    #  Returns: 
+    #     None
+    #
+    ######################################################
+        
     def __init__(self, widget: tk.Label, root: tk.Tk):
         """Initialize GIF animator.
         
